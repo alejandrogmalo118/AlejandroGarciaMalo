@@ -3,6 +3,7 @@ using AlejandroGarciaMalo.Model.Repositorio;
 using Autofac;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.Services;
 
 namespace AlejandroGarciaMalo
@@ -48,7 +49,7 @@ namespace AlejandroGarciaMalo
             {
                 var repositorio = scope.Resolve<IRepositorio>();
 
-                foreach (var rebelde in Listas.RebeldesRegistrados)
+                foreach (var rebelde in Listas.RebeldesRegistrados.ToList())
                 {
                     if (!repositorio.Exists(rebelde))
                     {
@@ -82,7 +83,7 @@ namespace AlejandroGarciaMalo
                     return listStRebeldes;
                 }
 
-                foreach (var rebelde in Listas.RebeldesRegistrados)
+                foreach (var rebelde in Listas.RebeldesRegistrados.ToList())
                 {
                     var strRebelde = rebelde.ConvertToString();
                     listStRebeldes.Add(strRebelde);

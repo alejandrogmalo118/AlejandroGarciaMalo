@@ -31,7 +31,7 @@ namespace AlejandroGarciaMalo.Model.Factoria
         }
     }
 
-    public static class Listas
+    public static partial class Listas
     {
         public static List<Rebelde> RebeldesRegistrados = new List<Rebelde>();
     }
