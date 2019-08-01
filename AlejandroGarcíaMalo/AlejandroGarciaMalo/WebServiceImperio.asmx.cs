@@ -27,6 +27,11 @@ namespace AlejandroGarciaMalo
             ContainerDependency = builder.Build();
         }
         
+        /// <summary>
+        /// Inserta rebeldes en el fichero.
+        /// </summary>
+        /// <param name="rebeldes"></param>
+        /// <returns></returns>
         [WebMethod]
         public bool InsertarRebeldes(List<string> rebeldes)
         {
@@ -67,6 +72,10 @@ namespace AlejandroGarciaMalo
             return true;
         }
 
+        /// <summary>
+        /// Obtiene los rebeldes del fichero.
+        /// </summary>
+        /// <returns></returns>
         [WebMethod]
         public List<string> ObtenerRebeldes()
         {

@@ -127,3 +127,4 @@ D:\Users\VYU21\Documents\GitHub\AlejandroGarciaMalo\AlejandroGarcíaMalo\Alejand
 D:\Users\VYU21\Documents\GitHub\AlejandroGarciaMalo\AlejandroGarcíaMalo\AlejandroGarciaMalo\obj\Debug\AlejandroGarciaMalo.csproj.CopyComplete
 D:\Users\VYU21\Documents\GitHub\AlejandroGarciaMalo\AlejandroGarcíaMalo\AlejandroGarciaMalo\obj\Debug\AlejandroGarciaMalo.dll
 D:\Users\VYU21\Documents\GitHub\AlejandroGarciaMalo\AlejandroGarcíaMalo\AlejandroGarciaMalo\obj\Debug\AlejandroGarciaMalo.pdb
+D:\Users\VYU21\Documents\GitHub\AlejandroGarciaMalo\AlejandroGarcíaMalo\AlejandroGarciaMalo\obj\Debug\AlejandroGarciaMalo.csprojAssemblyReference.cache

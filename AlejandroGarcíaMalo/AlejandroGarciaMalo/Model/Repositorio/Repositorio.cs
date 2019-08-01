@@ -11,6 +11,10 @@ namespace AlejandroGarciaMalo.Model.Repositorio
     {
         private const string Path = "RegistroRebeldes.txt";
 
+        /// <summary>
+        /// Obtener todos los rebeldes que haya en el fichero.
+        /// </summary>
+        /// <returns>Lista de rebeldes</returns>
         public List<Rebelde> ObtenerTodos()
         {
             var listRebelde = new List<Rebelde>();
@@ -54,6 +58,10 @@ namespace AlejandroGarciaMalo.Model.Repositorio
             return listRebelde;
         }
 
+        /// <summary>
+        /// Inserta en el fichero el rebelde que se pase por parametro.
+        /// </summary>
+        /// <param name="rebelde"></param>
         public void Insertar(Rebelde rebelde)
         {
             using (var writer = File.AppendText(Path))
@@ -62,6 +70,11 @@ namespace AlejandroGarciaMalo.Model.Repositorio
             }
         }
 
+        /// <summary>
+        /// Modifica una linea del fichero si el nombre del rebelde dado concide con alguno del fichero,
+        /// cambiando el planeta y el registro.
+        /// </summary>
+        /// <param name="rebelde"></param>
         public void Modificar(Rebelde rebelde)
         {
             string[] rows;
@@ -124,6 +137,12 @@ namespace AlejandroGarciaMalo.Model.Repositorio
             }
         }
         
+        /// <summary>
+        /// Comprobación de la existencia del rebelde dado en el fichero.
+        /// Antes se comprueba si existe el fichero.
+        /// </summary>
+        /// <param name="rebelde"></param>
+        /// <returns></returns>
         public bool Exists(Rebelde rebelde)
         {
             return File.Exists(Path) && ObtenerTodos().Exists(r => r.Nombre.Equals(rebelde.Nombre));

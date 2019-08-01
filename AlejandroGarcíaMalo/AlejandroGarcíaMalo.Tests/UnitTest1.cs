@@ -31,6 +31,10 @@ namespace AlejandroGarcíaMalo.Tests
             Container = builder.Build();
         }
 
+        /// <summary>
+        /// Se comprueba si cada linea tiene 3 campos predeterminados,
+        /// y si hay algun campo numerico.
+        /// </summary>
         [TestMethod]
         public void ComprobarRebeldes()
         {
@@ -53,6 +57,9 @@ namespace AlejandroGarcíaMalo.Tests
             }
         }
 
+        /// <summary>
+        /// Se comprueba que se recuperan bien los rebeldes del fichero.
+        /// </summary>
         [TestMethod]
         public void ObtenerRebeldes()
         {
@@ -61,6 +68,9 @@ namespace AlejandroGarcíaMalo.Tests
             Assert.AreEqual(ListRebeldes.Count, 3);
         }
 
+        /// <summary>
+        /// Se comprueba la insercion de rebeldesen un fichero.
+        /// </summary>
         [TestMethod]
         public void InsertarRebelde()
         {
@@ -88,6 +98,9 @@ namespace AlejandroGarcíaMalo.Tests
             Assert.AreEqual(numRebeldes, 3);
         }
 
+        /// <summary>
+        /// Comprobación de la modificación de un rebelde.
+        /// </summary>
         [TestMethod]
         public void ModificarRebelde()
         {
@@ -102,6 +115,9 @@ namespace AlejandroGarcíaMalo.Tests
             }
         }
 
+        /// <summary>
+        /// Metodo que rellena una lista con los rebeldes que hay en el fichero.
+        /// </summary>
         private static void RellenarListaRebeldes()
         {
             foreach (var rebelde in Rebeldes)

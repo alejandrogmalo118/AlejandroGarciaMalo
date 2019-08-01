@@ -6,6 +6,9 @@ using System.Web;
 
 namespace AlejandroGarciaMalo.Model.Factoria
 {
+    /// <summary>
+    /// Factoria para crear rebeldes y añadirlos a la lista de rebeldes registrados.
+    /// </summary>
     public class FactoriaRebelde : FactoriaBase
     {
         public string Nombre { get; set; }
@@ -20,6 +23,9 @@ namespace AlejandroGarciaMalo.Model.Factoria
             CrearObjeto();
         }
 
+        /// <summary>
+        /// Crea un rebelde y lo añade a la lista si no existe previamente.
+        /// </summary>
         public sealed override void CrearObjeto()
         {
             var rebelde = new Rebelde(Nombre, Planeta, Registro);
@@ -30,9 +36,12 @@ namespace AlejandroGarciaMalo.Model.Factoria
             }
         }
     }
-
+    
     public static partial class Listas
     {
+        /// <summary>
+        /// Lista con todos los rebeldes registrados.
+        /// </summary>
         public static List<Rebelde> RebeldesRegistrados = new List<Rebelde>();
     }
 }

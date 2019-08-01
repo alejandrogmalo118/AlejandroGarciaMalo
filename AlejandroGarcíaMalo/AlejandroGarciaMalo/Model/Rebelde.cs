@@ -16,6 +16,11 @@ namespace AlejandroGarciaMalo.Model
         public string Planeta { get; set; }
         public DateTime Registro { get; set; }
 
+        /// <summary>
+        /// Convierte el rebelde en un string con todas sus propiedades
+        /// separadas por comas.
+        /// </summary>
+        /// <returns></returns>
         public string ConvertToString()
         {
             var stringBuilder = new StringBuilder();
