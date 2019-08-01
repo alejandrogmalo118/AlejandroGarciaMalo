@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="InsertarRebeldes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rebeldes" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertarRebeldesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarRebeldesResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerRebeldes">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerRebeldesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerRebeldesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InsertarRebeldesSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarRebeldes" />
+  </wsdl:message>
+  <wsdl:message name="InsertarRebeldesSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarRebeldesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerRebeldesSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerRebeldes" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerRebeldesSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerRebeldesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceImperioSoap">
+    <wsdl:operation name="InsertarRebeldes">
+      <wsdl:input message="tns:InsertarRebeldesSoapIn" />
+      <wsdl:output message="tns:InsertarRebeldesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerRebeldes">
+      <wsdl:input message="tns:ObtenerRebeldesSoapIn" />
+      <wsdl:output message="tns:ObtenerRebeldesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceImperioSoap" type="tns:WebServiceImperioSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarRebeldes">
+      <soap:operation soapAction="http://tempuri.org/InsertarRebeldes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerRebeldes">
+      <soap:operation soapAction="http://tempuri.org/ObtenerRebeldes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceImperioSoap12" type="tns:WebServiceImperioSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarRebeldes">
+      <soap12:operation soapAction="http://tempuri.org/InsertarRebeldes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerRebeldes">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerRebeldes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceImperio">
+    <wsdl:port name="WebServiceImperioSoap" binding="tns:WebServiceImperioSoap">
+      <soap:address location="http://localhost:62982/WebServiceImperio.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceImperioSoap12" binding="tns:WebServiceImperioSoap12">
+      <soap12:address location="http://localhost:62982/WebServiceImperio.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

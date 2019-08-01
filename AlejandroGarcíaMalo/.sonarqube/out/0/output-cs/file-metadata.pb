@@ -1,0 +1,10 @@
+l
+cD:\Users\VYU21\source\repos\AlejandroGarcíaMalo\AlejandroGarciaMalo\Model\Factoria\FactoriaBase.csutf-8o
+fD:\Users\VYU21\source\repos\AlejandroGarcíaMalo\AlejandroGarciaMalo\Model\Factoria\FactoriaRebelde.csutf-8^
+UD:\Users\VYU21\source\repos\AlejandroGarcíaMalo\AlejandroGarciaMalo\Model\Rebelde.csutf-8o
+fD:\Users\VYU21\source\repos\AlejandroGarcíaMalo\AlejandroGarciaMalo\Model\Repositorio\IRepositorio.csutf-8n
+eD:\Users\VYU21\source\repos\AlejandroGarcíaMalo\AlejandroGarciaMalo\Model\Repositorio\Repositorio.csutf-8h
+_D:\Users\VYU21\source\repos\AlejandroGarcíaMalo\AlejandroGarciaMalo\Properties\AssemblyInfo.csutf-8W
+ND:\Users\VYU21\source\repos\AlejandroGarcíaMalo\AlejandroGarciaMalo\Utiles.csutf-8g
+^D:\Users\VYU21\source\repos\AlejandroGarcíaMalo\AlejandroGarciaMalo\WebServiceImperio.asmx.csutf-8_
+TD:\Users\VYU21\AppData\Local\Temp\.NETFramework,Version=v4.6.1.AssemblyAttributes.csutf-8
